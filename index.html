@@ -1,14 +1,250 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Dushyant</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Goa Trip Itinerary — 16-19 Nov</title>
+  <style>
+    :root {
+      --accent: #0b8f6e;
+      --muted: #666;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --radius: 10px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: #111;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .wrap {
+      max-width: 900px;
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+    h1 {
+      margin: 10px 0 4px;
+      font-size: 28px;
+    }
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .section-title {
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      color: var(--accent);
+    }
+    .it-day {
+      margin-bottom: 16px;
+    }
+    .time {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    ul.clean {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    .img-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .img-row img {
+      flex: 1;
+      min-width: 45%;
+      max-width: 49%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-This is the web page of Dushyant Mahajan.
-Hello pls mail to 1710.mahajan@gmail.com for any prblm.
-<br>
-<h1>Mahajan.in</h1>
-<p>This is a paragraph.</p>
+  <div class="wrap">
+    <header>
+      <img src="https://cdn.pixabay.com/photo/2022/08/28/07/24/goa-7419954_1280.jpg" alt="Goa Beach">
+      <h1>Goa Trip Itinerary (16–19 Nov)</h1>
+      <p class="lead">Chill, sightseeing, beaches — Le Seasons, Candolim.</p>
+    </header>
 
+    <div class="card">
+      <div class="section-title"><h2>Day-by-Day Plan</h2></div>
+
+      <div class="it-day">
+        <strong>Day 1 — 16 Nov (Arrival & Chill)</strong><br>
+        <p><span class="time">14:30</span> Arrive in Goa → Check-in at Le Seasons Resort (Candolim)</p>
+        <p><span class="time">16:30</span> Candolim Beach → Sunset & relax at shacks</p>
+        <p><span class="time">18:30</span> Walk the Candolim local market</p>
+        <p><span class="time">20:00</span> Dinner — Fisherman’s Cove / Mermaid / De Candolim Deck / Grills N Curries</p>
+      </div>
+
+      <div class="it-day">
+        <strong>Day 2 — 17 Nov (North Goa + Arambol)</strong><br>
+        <p><span class="time">09:00</span> Start sightseeing</p>
+        <ul class="clean">
+          <li>Aguada Fort + Lighthouse (optional)</li>
+          <li>Sinquerim Beach</li>
+          <li>Dolphin Trip (optional)</li>
+          <li>Calangute Beach → Baga Beach</li>
+          <li>Lunch (1:30 PM) at Britto’s / Infantaria / St. Anthony’s</li>
+          <li>Free time (shops / creek) around 3:30 PM</li>
+          <li>Chapora Fort → Vagator → Anjuna</li>
+          <li><span class="time">17:45</span> Arambol Beach — sunset, chill & photos</li>
+          <li>Return to Candolim (~19:30), Dinner near hotel</li>
+        </ul>
+      </div>
+
+      <div class="it-day">
+        <strong>Day 3 — 18 Nov (South Goa Sightseeing)</strong><br>
+        <p><span class="time">10:00</span> Pickup → Mangeshi Temple → Basilica of Bom Jesus → St. Francis Xavier Church → Archaeological Museum</p>
+        <p><span class="time">13:00</span> Lunch at Spice Plantation (own cost)</p>
+        <p><span class="time">15:00</span> Explore Panjim: Church of Immaculate Conception, Latin Quarter (Fontainhas)</p>
+        <p><span class="time">16:45</span> Viewpoint at Dona Paula</p>
+        <p><span class="time">17:15</span> Miramar Beach → Panjim Market</p>
+        <p><span class="time">19:30</span> Return to hotel, dinner & rest</p>
+      </div>
+
+      <div class="it-day">
+        <strong>Day 4 — 19 Nov (Checkout)</strong><br>
+        <p><span class="time">09:00</span> Breakfast @ Café Chocolatti → Quick beach walk</p>
+        <p><span class="time">12:00</span> Checkout, transfer to airport</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title"><h2>Packing + Essentials</h2></div>
+      <div class="two-col">
+        <div>
+          <h4>Clothes & Beach</h4>
+          <ul class="clean">
+            <li>Light cotton shirts, shorts</li>
+            <li>Swimwear + extra towel</li>
+            <li>Slippers / sandals, sunglasses, cap</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Essentials</h4>
+          <ul class="clean">
+            <li>Sunscreen (SPF 30–50)</li>
+            <li>Powerbank, phone waterproof pouch</li>
+            <li>Wet wipes, small backpack</li>
+            <li>Mosquito repellent, basic first-aid</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title"><h2>Top Photo / Reel Spots</h2></div>
+      <div class="img-row">
+        <img src="https://cdn.pixabay.com/photo/2021/04/25/20/17/arambol-6203559_1280.jpg" alt="Arambol Beach">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Fort_Aguada_Fortification_%281%29.jpg" alt="Fort Aguada">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Vagator_Beach_Goa_%281%29.jpg" alt="Vagator Beach / Cliff">
+        <img src="https://cdn.pixabay.com/photo/2013/02/11/18/16/goa-77848_1280.jpg" alt="Goa Beach Palm Trees">
+      </div>
+      <p>Key spots: Arambol Beach (sunset + drums), Fort Aguada, Chapora Fort cliff, Vagator cliff, Fontainhas (Latin Quarter), Dona Paula viewpoint.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-title"><h2>Time-wise Flow (Quick Reference)</h2></div>
+      <pre>
+DAY 2 — North + Arambol
+09:00 Pickup
+09:20 Aguada Fort
+10:20 Lighthouse
+11:00 Sinquerim
+12:00 Dolphin Trip (opt)
+13:30 Lunch
+15:30 Relax / Shop
+16:30 Chapora Fort
+17:00 Vagator → Anjuna
+17:45 Arambol Beach (Sunset)
+19:30 Return to hotel
+
+DAY 3 — South Goa
+10:00 Pickup
+10:40 Mangeshi Temple
+11:30 Basilica of Bom Jesus
+12:00 Archaeological Museum
+13:00 Plantation Lunch
+15:00 Panjim Church
+15:30 Latin Quarter (Fontainhas)
+16:30 Dona Paula
+17:00 Miramar Beach
+17:30 Panjim Market
+19:30 Back to hotel
+      </pre>
+    </div>
+
+    <div class="card">
+      <div class="section-title"><h2>Food & Shopping Guide</h2></div>
+      <p><strong>Food:</strong> Sample Goan prawn curry, king-fish thali, bebinca dessert.</p>
+      <p><strong>Shopping:</strong></p>
+      <ul class="clean">
+        <li>Candolim / Calangute: beachwear, shell jewellery, flip-flops</li>
+        <li>Panjim Market: cashews, Goan spices, bebinca</li>
+        <li>Arambol: boho clothes, dreamcatchers, anklets</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title"><h2>Transport & Tips</h2></div>
+      <ul class="clean">
+        <li>Use GoaMiles / QuickCab / FROGO for local travel.</li>
+        <li>Reapply sunscreen often; stay hydrated.</li>
+        <li>Avoid leaving valuables on beach chairs.</li>
+        <li>Wear comfy footwear; Goa has sandy + rocky parts.</li>
+      </ul>
+    </div>
+
+    <footer class="card">
+      <p>Created for <strong>bropoy</strong> — clean Goa trip plan. Save / print via browser.</p>
+    </footer>
+  </div>
 </body>
 </html>
