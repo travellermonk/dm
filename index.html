@@ -1,116 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Mumma</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windows 7 Boot - HBD Papa</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: black;
-            color: white;
-            text-align: center;
-            overflow-x: hidden;
-        }
+<style>
+    body {
+        margin: 0;
+        background: black;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        color: white;
+    }
 
-        /* Gold particles */
-        .particles {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: url('https://i.imgur.com/yYz7Z9z.png');
-            opacity: 0.25;
-            pointer-events: none;
-            animation: float 12s infinite linear;
-        }
+    /* -------------------- WINDOWS 7 BOOT -------------------- */
+    #boot {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: bootOut 3.5s forwards;
+    }
 
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
-        }
+    @keyframes bootOut {
+        0% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; visibility: hidden; }
+    }
 
-        h1 {
-            font-size: 3.2rem;
-            margin-top: 70px;
-            background: linear-gradient(90deg, #ffd700, #ffcc33, #fff2a6);
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: glow 2s infinite alternate;
-        }
+    #boot img {
+        width: 240px;
+        margin-bottom: 15px;
+    }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 10px gold; }
-            to { text-shadow: 0 0 25px gold; }
-        }
+    .boot-text {
+        font-size: 1.3rem;
+        opacity: 0.85;
+    }
 
-        .subtitle {
-            font-size: 1.6rem;
-            margin-top: -10px;
-            color: #ffe69e;
-        }
+    /* -------------------- INTERNET EXPLORER -------------------- */
+    #ie {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83%;
+        max-width: 880px;
+        background: #f5f5f5;
+        border: 3px solid #b5b5b5;
+        border-radius: 4px;
+        opacity: 0;
+        animation: showIE 0.9s forwards 3.4s;
+        box-shadow: 0 0 18px rgba(255,255,255,0.25);
+    }
 
-        .card {
-            background: rgba(255, 215, 0, 0.15);
-            border: 1px solid rgba(255, 215, 0, 0.4);
-            width: 80%;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            animation: fadeIn 1.5s ease;
-        }
+    @keyframes showIE {
+        from { opacity: 0; transform: translate(-50%, -25px); }
+        to   { opacity: 1; transform: translate(-50%, 0); }
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .ie-title {
+        background: linear-gradient(#3e73ab, #2d5d8d);
+        color: white;
+        padding: 9px;
+        font-size: 1.15rem;
+        display: flex;
+        justify-content: space-between;
+    }
 
-        p {
-            font-size: 1.3rem;
-            line-height: 1.7;
-            color: #fff6d9;
-        }
+    .ie-buttons span {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        margin-left: 6px;
+        background-size: cover;
+    }
+    .min { background-image: url('https://i.imgur.com/rH4VUE0.png'); }
+    .max { background-image: url('https://i.imgur.com/w0e5tFz.png'); }
+    .close { background-image: url('https://i.imgur.com/xP7QJxN.png'); }
 
-        .heart {
-            font-size: 55px;
-            animation: beat 1s infinite;
-            margin-top: 15px;
-        }
+    .ie-body {
+        padding: 20px;
+        background: white;
+        color: black;
+        min-height: 320px;
+    }
 
-        @keyframes beat {
-            50% { transform: scale(1.25); }
-        }
+    /* Loading Bar */
+    .loading-bar {
+        width: 100%;
+        height: 6px;
+        background: #dcdcdc;
+        margin-bottom: 18px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
 
-        footer {
-            margin-top: 35px;
-            color: #ffdf7e;
-            font-size: 1.4rem;
-            text-shadow: 0 0 15px gold;
-        }
-    </style>
+    .loading-fill {
+        width: 0%;
+        height: 100%;
+        background: #2a6fcf;
+        animation: fill 2.2s forwards ease-in-out;
+    }
+
+    @keyframes fill {
+        from { width: 0%; }
+        to { width: 100%; }
+    }
+
+    /* -------------------- HBD PAGE -------------------- */
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        color: #2d5d8d;
+        margin: 5px 0 12px;
+    }
+
+    .date {
+        text-align: center;
+        font-size: 1.15rem;
+        color: #555;
+        margin-bottom: 22px;
+    }
+
+    .msg {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.65;
+        padding: 0 20px;
+    }
+
+</style>
 </head>
-
 <body>
-    <div class="particles"></div>
 
-    <h1>🎂 Happy Birthday Mumma 🎉</h1>
-    <div class="subtitle">From Your Teddy ❤️</div>
+<!-- WINDOWS 7 STARTUP SOUND -->
+<audio autoplay>
+    <source src="https://files.catbox.moe/0e0g7o.mp3">
+</audio>
 
-    <div class="card">
-        <p>
-            Dear Mumma,<br><br>
-            You are my strength, my happiness, and my biggest blessing.  
-            On your special day, I want to remind you how precious you are.  
-            May your life be filled with endless love, health, and joy.  
-            You deserve the entire world and more. 💛
-        </p>
-        <div class="heart">💛</div>
+<!-- WINDOWS 7 BOOT -->
+<div id="boot">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Windows_7_Logo.png">
+    <div class="boot-text">Starting Windows...</div>
+</div>
+
+<!-- INTERNET EXPLORER WINDOW -->
+<div id="ie">
+    <div class="ie-title">
+        Internet Explorer
+        <div class="ie-buttons">
+            <span class="min"></span>
+            <span class="max"></span>
+            <span class="close"></span>
+        </div>
     </div>
 
-    <footer>I Love You Mumma — Forever & Ever 💫</footer>
+    <div class="ie-body">
+
+        <div class="loading-bar">
+            <div class="loading-fill"></div>
+        </div>
+
+        <div class="title">🎉 Happy Birthday Papa 🎉</div>
+        <div class="date"><b>Date: 03.12.2025</b></div>
+
+        <div class="msg">
+            Dear Papa,<br><br>
+            Wishing you a very Happy Birthday!  
+            You are my hero, my strength, and my biggest inspiration.  
+            May your life be filled with happiness, good health and joy.  
+            Thank you for always being there for me.  
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>
